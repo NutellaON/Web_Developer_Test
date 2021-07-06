@@ -63,8 +63,24 @@ input {
     height: 70px;
     left: 100px;
     top: 539px;
-
-background: #FFFFFF;
-border: 1px solid #E3E3E4;
-box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E4;
+    box-sizing: border-box;
+    border-left: 4px solid #4066A5;
+    padding-left: 44px;
+  }
+::placeholder 
+  {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  #input_container {
+    position: relative;
+}
+#input-container > img {
+    position: absolute;
+    top: 12px;
+    left: 15px;
   }
