@@ -1,3 +1,10 @@
+body{
+    position: relative;
+width: 1920px;
+height: 1080px;
+
+background: #FFFFFF;
+}
 #column_left {
     float: left;
     width: 680px;
@@ -5,29 +12,27 @@
 }
 #column_right {
     float: left;
-    width: 200px;
-    height: 1080px;
+    width: 1240px;
+height: 1080px;
 }
-    
-.row:after {
-    content: "";
-    display: block;
-    
-    }
 .navbar{
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 234px;
+   
     height: 40px;
     width: 480px;   
     left: 100px;
     top: 100px;
+    position: absolute;
 }
 .navbar a{
     text-decoration: none;
     color: #6A707B;
     padding-left: 30px;
+    text-align: center;
+    
+}
+.topnav-right{
+    float: right;
+    padding-top: 18px;
 }
 .navbar a:hover{
     color: #131821;
@@ -143,3 +148,38 @@ left: 140px;
 top: 740px;
 background: #E3E3E4;
 }
+.circle {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 218px;
+    top: 791px;
+    border-radius: 50%;
+    border: 2px solid #E3E3E4;
+    box-sizing: border-box;
+  }
+  .circle:hover {
+    background: #4267B2;
+    box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  }
+  .circle:active{
+    background: #2F4A80;
+    box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+  }
+  #fb
+  {
+    height: 16px;
+    width: 8px;
+    left: 218px;
+    top:791px;
+    border-radius: 0px;
+    position: absolute;
+  }
+  .pine{
+    float:left;
+    width: 118px;
+    height: 40px;
+    left: 100px;
+    top: 100px;
+  }
+  
