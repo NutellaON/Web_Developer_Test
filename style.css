@@ -57,7 +57,11 @@ p{
     left: 140px;
     top: 433px;
 }
-input {
+#input_container {
+    position:relative;
+    
+}
+#epasts {
     position: absolute;
     width: 663px;
     height: 70px;
@@ -68,7 +72,9 @@ input {
     box-sizing: border-box;
     border-left: 4px solid #4066A5;
     padding-left: 44px;
-  }
+    
+    
+}
 ::placeholder 
   {
     font-family: Arial;
@@ -76,11 +82,15 @@ input {
     font-weight: normal;
     font-size: 16px;
   }
-  #input_container {
-    position: relative;
+#poga{
+    width: 24px;
+    height: 14px;
+    background-image: url(images/ic_arrow.png);
+    background-repeat: no-repeat;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
-#input-container > img {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-  }
