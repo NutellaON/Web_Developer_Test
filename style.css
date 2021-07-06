@@ -28,14 +28,23 @@ height: 1080px;
     color: #6A707B;
     padding-left: 30px;
     text-align: center;
-    
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
 }
 .topnav-right{
     float: right;
-    padding-top: 18px;
+    padding-top: 14px;
 }
 .navbar a:hover{
-    color: #131821;
+    
+    color: #4066A5;
+}
+.navbar a:active{
+    
+    color: #233759;
 }
 .h1{
     position: absolute;
@@ -110,8 +119,8 @@ display: flex;
 position: relative;
 width: 400px;
 height: 28px;
-top:294px;
 left: 181px;
+top: 662px;
 }
 .check
 {
