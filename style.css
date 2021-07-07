@@ -5,6 +5,13 @@ height: 1080px;
 
 background: #FFFFFF;
 }
+.pine{
+    float:left;
+    width: 118px;
+    height: 40px;
+    left: 100px;
+    top: 100px;
+  }
 #column_left {
     float: left;
     width: 680px;
@@ -93,6 +100,9 @@ height: 1080px;
     width: 663px;
     height: 70px;
     position:absolute;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
 }
 ::placeholder 
   {
@@ -109,14 +119,32 @@ height: 1080px;
 	cursor: pointer;
 	outline: inherit;
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 14px;
     left: 599px;
     top: 28px;
-    background: #FFFFFF;
-    border: 1px solid #E3E3E4;
-    box-sizing: border-box;
-    border-radius: 3px;
+    
+    margin-bottom: 28px;
+    background:url('images/ic_arrow.png') no-repeat;
+    cursor:pointer;
+}
+#poga:hover
+{
+    color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    left: 599px;
+    top: 28px;
+    
+    margin-bottom: 28px;
+    background:url('images/ic_arrow\(blue\).svg') no-repeat;
+    
 }
 #tos{
 display: flex;
@@ -148,36 +176,51 @@ height: 28px;
 }
 #terms
 {
-
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-text-decoration: underline;
-color: #131821;
+    text-decoration: underline;
+    color: #131821;
 }
 hr{
-position: absolute;
-width: 400px;
-height: 1px;
-left: 140px;
-top: 740px;
-background: #E3E3E4;
-}
-.circle {
     position: absolute;
-    width: 46px;
-    height: 46px;
+    width: 400px;
+    height: 1px;
+    left: 140px;
+    top: 740px;
+    background: #E3E3E4;
+}
+#soc{
+    display: flex;
+    position: relative;
     left: 218px;
     top: 791px;
+    width: 244px;
+    height: 46px;
+}
+.circle {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    
     border-radius: 50%;
     border: 2px solid #E3E3E4;
     box-sizing: border-box;
+    display: block;
+    background-image: url('images/ic_facebook.svg');
+    background-position:50% 50%;
+    background-repeat:no-repeat;    
+    
   }
   .circle:hover {
     background: #4267B2;
     box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+    background-image: url("images/ic_facebook.svg");
+    background-repeat:no-repeat;    
+    background-position:  50%,50%;
+    
   }
   .circle:active{
     background: #2F4A80;
@@ -186,16 +229,6 @@ background: #E3E3E4;
   #fb
   {
     position: absolute;
-left: 8.1%;
-right: 91.36%;
-top: 68.94%;
-bottom: 30.06%;
+    
+ 
   }
-  .pine{
-    float:left;
-    width: 118px;
-    height: 40px;
-    left: 100px;
-    top: 100px;
-  }
-  
