@@ -109,23 +109,29 @@ height: 1080px;
 	cursor: pointer;
 	outline: inherit;
     position: absolute;
-    width: 24px;
-    height: 14px;
+    width: 26px;
+    height: 26px;
     left: 599px;
     top: 28px;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E4;
+    box-sizing: border-box;
+    border-radius: 3px;
 }
 #tos{
 display: flex;
 position: relative;
-width: 400px;
-height: 28px;
-left: 181px;
-top: 662px;
+left: 140px;
+top: 663px;
 }
 .check
 {
     width: 26px;
     height: 26px;
+    margin: 1px 1px;
+}
+.check:active{
+    background: #4066A5;
 }
 #agree{
 
@@ -137,17 +143,19 @@ line-height: 28px;
 color: #6A707B;
 padding-left: 15px;
 
-justify-content: center
+width: 359px;
+height: 28px;
 }
 #terms
 {
 
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 28px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
 text-decoration: underline;
+color: #131821;
 }
 hr{
 position: absolute;
@@ -177,12 +185,11 @@ background: #E3E3E4;
   }
   #fb
   {
-    height: 16px;
-    width: 8px;
-    left: 218px;
-    top:791px;
-    border-radius: 0px;
     position: absolute;
+left: 8.1%;
+right: 91.36%;
+top: 68.94%;
+bottom: 30.06%;
   }
   .pine{
     float:left;
