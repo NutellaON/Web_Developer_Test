@@ -349,24 +349,27 @@ hr{
         
         color: #233759;
     }
-    
-    #test{
-        position: absolute;
-        width: 1119px;
-        height: 746px;
-        left: -281px;
-        top: 66px;
-        
-    }
     #column_right {
         
-        width: 0px;
-        height: 0px;
+        position: absolute;
+        width: 375px;
+        height: 812px;
         left: 0px;
         top: 0px;
-        }
-    #column_left {
+        background-image: url('images/image_summer.png');
+        background-repeat: no-repeat;
         
+        
+
+        }
+    #test{
+        display: none;
+        position: absolute;
+        left: -281px;
+        top: 66px;
+        height: 746px;
+    }
+    #column_left {
         width: 0px;
         height: 0px;
         left: 0px;
@@ -494,5 +497,10 @@ hr{
     }
     #pine{
         display: none;
+    }
+    .topnav-right{
+        float: right;
+        padding-top: 21px;
+        padding-right: 20px;
     }
 }
