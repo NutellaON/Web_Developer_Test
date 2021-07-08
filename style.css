@@ -475,4 +475,12 @@ hr{
         top: 274px;
         background: #E3E3E4;
     }
+    #soc{
+        display: flex;
+        position: relative;
+        left: 53px;
+        top: 275px;
+        width: 214px;
+        height: 46px;
+    }
 }
