@@ -371,22 +371,25 @@ hr{
         top: 0px;
     }
     .cont{
-        display: flex;
         position: relative;
         width: 335px;
         height: 371px;
         left: 20px;
         top: 254px;
 
-    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+        background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
     }
     .h1{
-        display:inline-block;
         position: absolute;
-        width: 295px;
-        height: 34px;
-        left: 40px;
-        top: 284px;
+        width: 399px; 
+        height: 44px; 
+        left: 20px; 
+        top: 30px; 
+        font-family: Georgia;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 44px;
 
         font-family: Georgia;
         font-style: normal;
@@ -394,121 +397,5 @@ hr{
         font-size: 24px;
         line-height: 34px;
       
-    }
-    .p{
-        display:inline-block;
-        position: absolute;
-        width: 295px;
-        height: 52px;
-        left: 40px;
-        top: 328px;
-
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 26px;
-    }
-    #input_container {
-        display: flex;
-        position: relative;
-        left: 40px;
-        top: 400px;
-    }    
-    #epasts {
-        background: #FFFFFF;
-        border: 1px solid #E3E3E4;
-        box-sizing: border-box;
-        border-left: 4px solid #4066A5;
-        padding-left: 15px;
-        width: 295px;
-        height: 60px;
-        position:absolute;
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-    }
-    #poga{
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-        position: absolute;
-        width: 24px;
-        height: 14px;
-        left: 253px;
-        top: 23px;
-        margin-bottom: 23px;
-        background:url('images/ic_arrow.png') no-repeat;
-        cursor:pointer;
-    }
-    #poga:hover
-    {
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-        position: absolute;
-        width: 24px;
-        height: 14px;
-        left: 253px;
-        top: 23px;
-        margin-bottom: 23px;
-        background:url('images/ic_arrow\(blue\).svg') no-repeat;
-    }
-    #tos{
-        display: flex;
-        position: relative;
-        left: 40px;
-        top: 480px;
-    }
-    .check{
-        width: 26px;
-        height: 26px;
-        margin: 1px 1px;
-    }
-    .check:active{
-        background: #4066A5;
-    }
-    #agree{
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
-    color: #6A707B;
-    padding-left: 15px;
-    width: 359px;
-    height: 28px;
-    }
-    #terms
-    {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 28px;
-        text-decoration: underline;
-        color: #131821;
-    }
-    hr{
-        position: absolute;
-        width: 295px;
-        height: 1px;
-        left: 40px;
-        top: 528px;
-        background: #E3E3E4;
-    }
-    #soc{
-        display: flex;
-        position: relative;
-        width: 214px;
-        height: 46px;
-        left: 73px;
-        top: 549px;
     }
   }
