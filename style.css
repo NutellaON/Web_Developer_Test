@@ -454,6 +454,41 @@ hr{
         margin-bottom: 23px;
         background:url('images/ic_arrow\(blue\).svg') no-repeat;
     }
+    #tos{
+        display: flex;
+        position: relative;
+        left: 40px;
+        top: 480px;
+    }
+    .check{
+        width: 26px;
+        height: 26px;
+        margin: 1px 1px;
+    }
+    .check:active{
+        background: #4066A5;
+    }
+    #agree{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6A707B;
+    padding-left: 15px;
+    width: 359px;
+    height: 28px;
+    }
+    #terms
+    {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        text-decoration: underline;
+        color: #131821;
+    }
     hr{
         position: absolute;
         width: 295px;
