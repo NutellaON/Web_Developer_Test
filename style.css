@@ -21,6 +21,9 @@ background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
     left: 680px;
     top: 0px;
 }
+#mobile{
+    display: none;
+}
 .navbar{
    
     height: 40px;
@@ -482,5 +485,14 @@ hr{
         top: 275px;
         width: 214px;
         height: 46px;
+    }
+    #mobile{
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 10px
+    }
+    #pine{
+        display: none;
     }
 }
