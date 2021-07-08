@@ -4,9 +4,6 @@ body{
     background: #FFFFFF;
 }
 #column_left {
-    
-    width: 680px;
-    height: 1080px;
     position: absolute;
     width: 680px;
     height: 1080px;
@@ -19,10 +16,10 @@ background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
 #column_right {
    
     position: absolute;
-width: 1620px;
-height: 1080px;
-left: 680px;
-top: 0px;
+    width: 1240px;
+    height: 1080px;
+    left: 680px;
+    top: 0px;
 }
 .navbar{
    
@@ -360,23 +357,31 @@ hr{
         
     }
     #column_right {
-        position: absolute;
+        
         width: 0px;
-        height: 0xp;
+        height: 0px;
         left: 0px;
         top: 0px;
         }
     #column_left {
-        position: absolute;
+        
         width: 0px;
-        height: 0xp;
+        height: 0px;
         left: 0px;
         top: 0px;
     }
     .cont{
-        
+        display: flex;
+        position: relative;
+        width: 335px;
+        height: 371px;
+        left: 20px;
+        top: 254px;
+
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
     }
     .h1{
+        display:inline-block;
         position: absolute;
         width: 295px;
         height: 34px;
@@ -391,6 +396,7 @@ hr{
       
     }
     .p{
+        display:inline-block;
         position: absolute;
         width: 295px;
         height: 52px;
