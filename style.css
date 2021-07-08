@@ -357,6 +357,7 @@ hr{
         height: 746px;
         left: -281px;
         top: 66px;
+        
     }
     #column_right {
         position: absolute;
@@ -452,5 +453,13 @@ hr{
         top: 23px;
         margin-bottom: 23px;
         background:url('images/ic_arrow\(blue\).svg') no-repeat;
+    }
+    hr{
+        position: absolute;
+        width: 295px;
+        height: 1px;
+        left: 40px;
+        top: 528px;
+        background: #E3E3E4;
     }
   }
