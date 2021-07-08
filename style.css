@@ -447,7 +447,7 @@ hr{
         cursor:pointer;
     }
     #poga:hover
-{
+    {
     color: inherit;
 	border: none;
 	padding: 0;
@@ -460,5 +460,19 @@ hr{
     left: 252px;
     top: 23px;
     background:url('images/ic_arrow\(blue\).svg') no-repeat;
+    }
+    #tos{
+        display: flex;
+        position: relative;
+        left: 20px;
+        top: 226px;
+    }
+    hr{
+        position: absolute;
+        width: 295px;
+        height: 1px;
+        left: 20px;
+        top: 274px;
+        background: #E3E3E4;
+    }
 }
-  }
