@@ -309,6 +309,13 @@ hr{
     background-repeat:no-repeat;    
     background-position:  50%,50%;
   }
+  #msg
+  {
+      
+    display: block;
+    position: absolute;
+    margin-top: 80px;     
+  }
   @media only screen and (max-width: 375px) {
     body {
         position: relative;

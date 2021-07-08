@@ -22,15 +22,17 @@
                         <div class="cont">
                             <div class="h1">Subscribe to newsletter</div>
                             <div class="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-                           
-                            <div id="input_container">
-                                <input type="text" id="epasts" name="epasts" class="inputField" placeholder="Type your email address here…">
-                                <button type="submit" id="poga"></button>
-                            </div>
-                            <div id="tos">
-                                <input type="checkbox" class="check">
-                                <div id="agree">I agree to <span id="terms">terms of service</span></div>
-                            </div>
+                            <form id="form">
+                                <div id="input_container">
+                                    <input type="text" id="epasts" name="epasts" class="inputField" placeholder="Type your email address here…" onkeydown="validation()">
+                                    <span id="msg"></span>
+                                    <button type="submit" id="poga"></button>
+                                </div>
+                                <div id="tos">
+                                    <input type="checkbox" class="check">
+                                    <div id="agree">I agree to <span id="terms">terms of service</span></div>
+                                </div>
+                            </form>
                             <hr>
                             <div id="soc">
                                 <div class="fb" ></div>
@@ -40,5 +42,31 @@
                             </div>
                         </div>    
                     </div>
+    <script type="text/javascript">
+        function validation()
+        {
+            var form = document.getElementById("form");
+            var email = document.getElementById("epasts").value;
+            var form = document.getElementById("msg");
+            var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
+
+            if(email.match(pattern))
+            {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                msg.innerHTML = "Your e-mail address is valid";
+                msg.style.color = "#ff0000"
+            }
+            else
+            {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                msg.innerHTML="Please provide a valid e-mail address";
+                msg.style.color="#ff0000"
+                document.getElementById("poga").disabled = true;
+            }
+
+        }
+    </script>
 </body>
 </html>
