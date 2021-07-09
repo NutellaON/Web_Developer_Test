@@ -33,7 +33,7 @@
                                     <div id="agree">I agree to <span id="terms">terms of service</span></div>
                                 </div>
                            
-                            <hr>
+                            <hr id="linija">
                             <div id="soc">
                                 <div class="fb" ></div>
                                 <div class="ig" ></div>
@@ -109,10 +109,10 @@
         function succes()
         {
             document.getElementById("p").innerHTML = "You have successfully subscribed to our email listing. Check your email for the discount code.";
-            document.getElementById("p").innerHTML = "Thanks for subscribing!";
+            document.getElementById("h1").innerHTML = "Thanks for subscribing!";
             document.getElementById("epasts").style.display = "none";
             document.getElementById("tos").style.display = "none";
-            
+            document.getElementById("linija").style.top="539px";
         }
     </script>
 </body>
