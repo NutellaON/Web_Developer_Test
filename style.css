@@ -55,7 +55,7 @@ background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
     
     color: #233759;
 }
-.h1{
+#h1{
     position: absolute;
     width: 399px;
     height: 44px;
@@ -68,7 +68,7 @@ background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
     line-height: 44px;
   
 }
-.p{
+#p{
     font-family: Arial;
     font-size: 16px;
     font-style: normal;
@@ -391,7 +391,7 @@ hr{
 
         background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
     }
-    .h1{
+    #h1{
         position: absolute;
         width: 399px; 
         height: 44px; 
@@ -410,7 +410,7 @@ hr{
         line-height: 34px;
       
     }
-    .p{
+    #p{
         font-family: Arial;
         font-style: normal;
         font-weight: normal;

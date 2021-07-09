@@ -20,19 +20,19 @@
                                 </div>
                         </div>
                         <div class="cont">
-                            <div class="h1">Subscribe to newsletter</div>
-                            <div class="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-                            <form id="form">
+                            <div id="h1">Subscribe to newsletter</div>
+                            <div id="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
+                            
                                 <div id="input_container">
                                     <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…">
                                     <span id="msg"></span>
-                                    <button type="submit" id="poga"></button>
+                                    <button type="sumbit" id="poga" onclick="succes()"></button>
                                 </div>
                                 <div id="tos">
                                     <input type="checkbox" id="chec" class="check" onclick="myFunction()">
                                     <div id="agree">I agree to <span id="terms">terms of service</span></div>
                                 </div>
-                            </form>
+                           
                             <hr>
                             <div id="soc">
                                 <div class="fb" ></div>
@@ -103,6 +103,16 @@
                 msg.style.color="#ff0000"
                 document.getElementById("poga").disabled = true;
             }
+        }
+    </script>
+    <script>
+        function succes()
+        {
+            document.getElementById("p").innerHTML = "You have successfully subscribed to our email listing. Check your email for the discount code.";
+            document.getElementById("p").innerHTML = "Thanks for subscribing!";
+            document.getElementById("epasts").style.display = "none";
+            document.getElementById("tos").style.display = "none";
+            
         }
     </script>
 </body>
