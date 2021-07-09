@@ -24,12 +24,12 @@
                             <div class="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
                             <form id="form">
                                 <div id="input_container">
-                                    <input type="text" id="epasts" name="epasts" class="inputField" placeholder="Type your email address here…" onkeydown="validation()">
+                                    <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…">
                                     <span id="msg"></span>
                                     <button type="submit" id="poga"></button>
                                 </div>
                                 <div id="tos">
-                                    <input type="checkbox" class="check">
+                                    <input type="checkbox" id="chec" class="check" onclick="myFunction()">
                                     <div id="agree">I agree to <span id="terms">terms of service</span></div>
                                 </div>
                             </form>
@@ -43,19 +43,28 @@
                         </div>    
                     </div>
     <script type="text/javascript">
+        
+        var checkBox = document.getElementById("chec");
+        var email = document.getElementById("epasts");
         function validation()
         {
             var form = document.getElementById("form");
-            var email = document.getElementById("epasts").value;
+            
             var form = document.getElementById("msg");
-            var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-            if(email.match(pattern))
+            if(email.value.match(pattern))
             {
-                form.classList.add("valid");
-                form.classList.remove("invalid");
-                msg.innerHTML = "Your e-mail address is valid";
-                msg.style.color = "#ff0000"
+                    form.classList.add("valid");
+                    form.classList.remove("invalid");
+                    msg.innerHTML="";
+                    
+                    if(checkBox.checked==false){
+                    msg.innerHTML="You must accept the terms and conditions";
+                    msg.style.color="#ff0000"
+                    document.getElementById("poga").disabled = true;
+                    }
+                    
             }
             else
             {
@@ -63,9 +72,37 @@
                 form.classList.add("invalid");
                 msg.innerHTML="Please provide a valid e-mail address";
                 msg.style.color="#ff0000"
+            }
+            if (email.value.slice(-2)=="co") {
+                        msg.innerHTML="We are not accepting subscriptions from Colombia emails";
+                        msg.style.color="#ff0000"  
+            }
+            if(email.value==0)
+            {
+                msg.innerHTML="Email address is required";
+                msg.style.color="#ff0000"
+                
+            } 
+        }
+        function myFunction() {
+            
+            if (checkBox.checked == true){ 
+                
+                msg.innerHTML="";
+                document.getElementById("poga").disabled = false;
+                if(email.value.length == 0)
+                {
+                    msg.innerHTML="Email address is required";
+                    msg.style.color="#ff0000"
+                    document.getElementById("poga").disabled = true;
+                }
+            }
+            else
+            {
+                msg.innerHTML="You must accept the terms and conditions";
+                msg.style.color="#ff0000"
                 document.getElementById("poga").disabled = true;
             }
-
         }
     </script>
 </body>
