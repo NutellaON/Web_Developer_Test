@@ -126,5 +126,32 @@
             
             }
     </script>
+    <script>
+        function myFunction(x) {
+          if (x.matches) { 
+            document.getElementById("linija").style.top="274px";
+            document.getElementById("soc").style.top="295px";
+            document.getElementById("p").style.top="183px";
+            document.getElementById("h1").style.top="139px";
+            document.getElementById("p").innerHTML = "You have successfully subscribed to our email listing. Check your email for the discount code.";
+            document.getElementById("h1").innerHTML = "Thanks for subscribing!";
+            document.getElementById("epasts").style.display = "none";
+            document.getElementById("tos").style.display = "none";
+            document.getElementById("poga").style.display = "none";
+            var img = document.createElement("img");
+ 
+            img.src = "images/ic_success.svg";
+            var src = document.getElementById("bod");
+            img.style.left="40px";
+            img.style.top="284px";
+            src.appendChild(img);
+            img.style.position="absolute";
+          } 
+        }
+        
+        var x = window.matchMedia("(max-width: 375px)")
+        myFunction(x) 
+        x.addListener(myFunction) 
+        </script>
 </body>
 </html>
