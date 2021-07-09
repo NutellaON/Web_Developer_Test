@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css">
 <title>Web developer test</title>
 </head>
-<body>
+<body id="bod">
             <div id="column_right">
                 <img id="test" src="images/image_summer.png" alt="test"> 
             </div>
@@ -115,14 +115,15 @@
             document.getElementById("linija").style.top="539px";
             document.getElementById("soc").style.top="590px";
             
-
             var img = document.createElement("img");
  
             img.src = "images/ic_success.svg";
-            var src = document.getElementById("con");
-            src.style.marginLeft="140px";
-            src.style.marginTop="269px";
+            var src = document.getElementById("bod");
+            img.style.left="140px";
+            img.style.top="269px";
             src.appendChild(img);
+            img.style.position="absolute";
+            
             }
     </script>
 </body>
