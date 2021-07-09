@@ -19,14 +19,14 @@
                                     <a href="#" class="link">Contact</a>
                                 </div>
                         </div>
-                        <div class="cont">
+                        <div  id="con" class="cont">
                             <div id="h1">Subscribe to newsletter</div>
                             <div id="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
                             
                                 <div id="input_container">
                                     <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…">
                                     <span id="msg"></span>
-                                    <button type="sumbit" id="poga" onclick="succes()"></button>
+                                    <button type="sumbit" id="poga" onclick="success()"></button>
                                 </div>
                                 <div id="tos">
                                     <input type="checkbox" id="chec" class="check" onclick="myFunction()">
@@ -106,7 +106,7 @@
         }
     </script>
     <script>
-        function succes()
+        function success()
         {
             document.getElementById("p").innerHTML = "You have successfully subscribed to our email listing. Check your email for the discount code.";
             document.getElementById("h1").innerHTML = "Thanks for subscribing!";
@@ -114,7 +114,16 @@
             document.getElementById("tos").style.display = "none";
             document.getElementById("linija").style.top="539px";
             document.getElementById("soc").style.top="590px";
-        }
+            
+
+            var img = document.createElement("img");
+ 
+            img.src = "images/ic_success.svg";
+            var src = document.getElementById("con");
+            src.style.marginLeft="140px";
+            src.style.marginTop="269px";
+            src.appendChild(img);
+            }
     </script>
 </body>
 </html>
