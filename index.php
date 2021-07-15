@@ -1,3 +1,39 @@
+<?php
+    if($_SERVER['REQUEST_METHOD']=='POST')
+    {
+        $email=$_POST["email"];
+        if (empty($_POST["email"])) {
+            $nameErr = "Email address is required";
+        }
+        elseif (substr("$email", -2)=="co")
+        {
+            $nameErr="We are not accepting subscriptions from Colombia emails";
+        }
+        elseif (empty($_POST['chec']))
+        {
+            $nameErr="You must accept the terms and conditions";
+        }
+        else
+        {
+            if (!preg_match('/^[^ ]+@[^ ]+\.[a-z]{2,3}$/',$email)) 
+            {
+                $nameErr="Please provide a valid e-mail address";
+            } 
+            else
+            {
+                if(isset($_POST['poga']))
+                {
+                    include 'db.php';
+                    echo $email=$_POST['email'];
+                    $obj=new Model();
+                    $obj->insert($email);
+                }
+            } 
+        }
+        
+    }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,12 +61,19 @@
                                 <form action="code.php" method="POST">
                                     <div id="input_container">
                                         
-                                        <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…" require>
-                                        <span id="msg"></span>
+                                        <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…" >
+                                        <span id="msg">
+                                            <?php if(isset($nameErr))
+                                            {
+                                               echo "<span style='color:red'>.$nameErr.</span>";   
+                                            }?> 
+                                            <?php
+                                            
+                                         ?></span>
                                         <button type="sumbit" id="poga" name="poga" onclick="success()"></button disabled>
                                     </div>
                                     <div id="tos">
-                                        <input type="checkbox" id="chec" class="check" onclick="myFunction()" require>
+                                        <input type="checkbox" id="chec" class="check" onclick="myFunction()" >
                                         <div id="agree">I agree to <span id="terms">terms of service</span></div>
                                     </div>
                                 </form>
