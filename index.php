@@ -25,12 +25,12 @@
                                 <form action="code.php" method="POST">
                                     <div id="input_container">
                                         
-                                        <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…">
+                                        <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…" require>
                                         <span id="msg"></span>
-                                        <button type="sumbit" id="poga" name="poga" onclick="success()"></button>
+                                        <button type="sumbit" id="poga" name="poga" onclick="success()"></button disabled>
                                     </div>
                                     <div id="tos">
-                                        <input type="checkbox" id="chec" class="check" onclick="myFunction()">
+                                        <input type="checkbox" id="chec" class="check" onclick="myFunction()" require>
                                         <div id="agree">I agree to <span id="terms">terms of service</span></div>
                                     </div>
                                 </form>
