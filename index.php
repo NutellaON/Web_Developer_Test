@@ -86,6 +86,9 @@
                             </div>
                         </div>    
                     </div>
+    <script>
+    document.getElementById("poga").disabled = true;
+    </script>
     <script type="text/javascript">
         
         var checkBox = document.getElementById("chec");
@@ -106,7 +109,7 @@
                     if(checkBox.checked==false){
                     msg.innerHTML="You must accept the terms and conditions";
                     msg.style.color="#ff0000"
-                    document.getElementById("poga").disabled = true;
+                    
                     }
                     
             }
@@ -138,14 +141,14 @@
                 {
                     msg.innerHTML="Email address is required";
                     msg.style.color="#ff0000"
-                    document.getElementById("poga").disabled = true;
+                    
                 }
             }
             else
             {
                 msg.innerHTML="You must accept the terms and conditions";
                 msg.style.color="#ff0000"
-                document.getElementById("poga").disabled = true;
+                
             }
         }
     </script>
