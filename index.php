@@ -22,17 +22,18 @@
                         <div  id="con" class="cont">
                             <div id="h1">Subscribe to newsletter</div>
                             <div id="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-                            
-                                <div id="input_container">
-                                    <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…">
-                                    <span id="msg"></span>
-                                    <button type="sumbit" id="poga" onclick="success()"></button>
-                                </div>
-                                <div id="tos">
-                                    <input type="checkbox" id="chec" class="check" onclick="myFunction()">
-                                    <div id="agree">I agree to <span id="terms">terms of service</span></div>
-                                </div>
-                           
+                                <form action="code.php" method="POST">
+                                    <div id="input_container">
+                                        
+                                        <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…">
+                                        <span id="msg"></span>
+                                        <button type="sumbit" id="poga" name="poga" onclick="success()"></button>
+                                    </div>
+                                    <div id="tos">
+                                        <input type="checkbox" id="chec" class="check" onclick="myFunction()">
+                                        <div id="agree">I agree to <span id="terms">terms of service</span></div>
+                                    </div>
+                                </form>
                             <hr id="linija">
                             <div id="soc">
                                 <div class="fb" ></div>
