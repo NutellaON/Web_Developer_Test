@@ -23,10 +23,11 @@
             {
                 if(isset($_POST['poga']))
                 {
+                    $datums=date("Y-m-d");
                     include 'db.php';
-                    echo $email=$_POST['email'];
+                    $email=$_POST['email'];
                     $obj=new Model();
-                    $obj->insert($email);
+                    $obj->insert($email,$datums);
                 }
             } 
         }

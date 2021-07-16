@@ -12,10 +12,10 @@ class Model
       $con=new mysqli($this->host,$this->user,$this->pwd,$this->dbname);
       return $con;
     }
-    public function insert($email)
+    public function insert($email,$datums)
     {
-      $con=$this->connect();
-      mysqli_query($con,"INSERT INTO email (email) values ('$email')");
+      
+      mysqli_query($con,"INSERT INTO email (email,datums) values ('$email','$datums')");
       header('Location: index.php');
     }
 }
