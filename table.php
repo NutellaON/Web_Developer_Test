@@ -114,6 +114,19 @@
     ?>
     <a href="table.php?page=<?=$next; ?>">next</a>
     <?php
+    $checklist  = '';
+    $check = explode('@', $row['email']);
+    $a=array($check[1]);
+     foreach($a as $t)
+          {
+                ?>
+                <button><?php echo $checklist .= $t; ?></button>
+                <?php
+          }   
+             } 
+            
+                            
+               
     }
     ?>   
 </div>
