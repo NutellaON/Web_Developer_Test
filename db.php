@@ -1,22 +1,21 @@
 <?php
+define('DB_SERVER','localhost');
+define('DB_USER','root');
+define('DB_PASS' ,'');
+define('DB_NAME', 'web');
 class Model
 {
-    private $host='localhost';
-    private $user='root';
-    private $pwd='';
-    private $dbname='web';
-    private $conn;
-
-    public function connect()
+    public function __construct()
     {
-      $con=new mysqli($this->host,$this->user,$this->pwd,$this->dbname);
-      return $con;
+      $con=mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
+      $this->dbh=$con;
     }
-    public function insert($email,$datums)
+    public function insert($email, $datums)
     {
       
-      mysqli_query($con,"INSERT INTO email (email,datums) values ('$email','$datums')");
+      $result=mysqli_query($this->dbh,"INSERT INTO email (email,datums) values ('$email','$datums')");
       header('Location: index.php');
+      
     }
     public function delete($id)
     {
