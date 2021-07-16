@@ -35,6 +35,7 @@
     }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +47,6 @@
                 <img id="test" src="images/image_summer.png" alt="test"> 
             </div>
                 <div id="column_left">
-                
                         <div class=navbar>
                                 <img id="mobile" src="images/logo_pineapple.svg">
                                 <img id="pine" src="images/logo_pineapple.png">
@@ -59,10 +59,10 @@
                         <div  id="con" class="cont">
                             <div id="h1">Subscribe to newsletter</div>
                             <div id="p">Subscribe to our newsletter and get 10% discount on pineapple glasses.</div>
-                                <form action="code.php" method="POST">
+                                <form action="" method="POST">
                                     <div id="input_container">
                                         
-                                        <input onkeyup="validation()" id="epasts" type="text"  name="epasts" class="inputField" placeholder="Type your email address here…" >
+                                        <input  id="epasts" type="text"  name="email" class="inputField" placeholder="Type your email address here…" onkeyup="validation()">
                                         <span id="msg">
                                             <?php if(isset($nameErr))
                                             {
@@ -71,13 +71,16 @@
                                             <?php
                                             
                                          ?></span>
-                                        <button type="sumbit" id="poga" name="poga" onclick="success()"></button disabled>
+                                        <button type="submit" id="poga" name="poga" onclick="success()" ></button>
                                     </div>
+                                    
                                     <div id="tos">
-                                        <input type="checkbox" id="chec" class="check" onclick="myFunction()" >
+                                        <input type="checkbox" name="chec" id="chec" class="check" onclick="ck()">
                                         <div id="agree">I agree to <span id="terms">terms of service</span></div>
                                     </div>
+                                    
                                 </form>
+                               
                             <hr id="linija">
                             <div id="soc">
                                 <div class="fb" ></div>
@@ -86,7 +89,7 @@
                                 <div class="yt" ></div>
                             </div>
                         </div>    
-                    </div>
+                </div>
     <script>
     document.getElementById("poga").disabled = true;
     </script>
@@ -106,7 +109,7 @@
                     form.classList.add("valid");
                     form.classList.remove("invalid");
                     msg.innerHTML="";
-                    
+                    document.getElementById("poga").style.cursor = "pointer"
                     if(checkBox.checked==false){
                     msg.innerHTML="You must accept the terms and conditions";
                     msg.style.color="#ff0000"
@@ -132,7 +135,7 @@
                 
             } 
         }
-        function myFunction() {
+        function ck() {
             
             if (checkBox.checked == true){ 
                 
@@ -153,7 +156,7 @@
             }
         }
     </script>
-    <script>
+     <script type="text/javascript">
         function success()
         {
             document.getElementById("p").innerHTML = "You have successfully subscribed to our email listing. Check your email for the discount code.";
@@ -172,11 +175,13 @@
             src.appendChild(img);
             img.style.position="absolute";
             
-            }
+        }
     </script>
     <script>
-        function myFunction(x) {
-          if (x.matches) { 
+        function myFunction(x) 
+        {
+          if (x.matches) 
+          { 
             document.getElementById("linija").style.top="274px";
             document.getElementById("soc").style.top="295px";
             document.getElementById("p").style.top="183px";
@@ -200,6 +205,6 @@
         var x = window.matchMedia("(max-width: 375px)")
         myFunction(x) 
         x.addListener(myFunction) 
-        </script>
+    </script>
 </body>
 </html>
