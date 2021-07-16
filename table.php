@@ -34,10 +34,11 @@
     }
     if(isset($_POST['del']))
     {
-        $id=$_POST['delete_id'];
-        $obj1=new Model();
-        $obj1->delete($id);
+                    $id=$_POST['delete_id'];
+                    $obj1=new Model();
+                    $obj1->delete($id);
     }
+               
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,32 +88,10 @@
         <td><?php echo $row['datums']; ?></td>
         <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
         <td><button type="submit" id="poga" name="del"  >x</button></td>
+      
+        
     </tr> 
-        <?php   
-            }
-            
-        ?> 
-    </tr>
-</table>
-<div class="pagination">
-  <?php 
-    if ($page>1) 
-    {
-    ?>
-    <a href="table.php?page=<?=$previous; ?>">previous</a>
-    <?php
-    }
-    ?>
-    <?php
-    for($i=1; $i<=$pages;$i++): ?>
-    <a href="table.php?page=<?= $i; ?>"><?=$i; ?></a>
-    <?php endfor; ?>
-    <?php 
-    $pages;
-    if ($page!=$pages) 
-    {
-    ?>
-    <a href="table.php?page=<?=$next; ?>">next</a>
+    
     <?php
     $checklist  = '';
     $check = explode('@', $row['email']);
@@ -126,10 +105,34 @@
              } 
             
                             
-               
-    }
-    ?>   
-</div>
+                      
+        ?>
+</table>
 </form>
+<div class="pagination">
+
+  <?php 
+                                    if ($page>1) 
+                                    {
+                                    ?>
+                                        <a href="table.php?page=<?=$previous; ?>">previous</a>
+                                    <?php
+                                    }
+                                    ?>
+                                    <?php
+                                    for($i=1; $i<=$pages;$i++): ?>
+                                    <a href="table.php?page=<?= $i; ?>"><?=$i; ?></a>
+                                    <?php endfor; ?>
+                                    <?php 
+                                    $pages;
+                                    if ($page!=$pages) 
+                                    {
+                                    ?>
+                                        <a href="table.php?page=<?=$next; ?>">next</a>
+                                    <?php
+                                    }
+                                    ?>   
+</div>
+
 </body>
 </html>
