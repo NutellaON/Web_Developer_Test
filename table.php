@@ -22,6 +22,12 @@
         $result = mysqli_query($connect, $query);
         return $result;
     }
+    if(isset($_POST['del']))
+    {
+        $id=$_POST['delete_id'];
+        $obj1=new Model();
+        $obj1->delete($id);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,8 +45,9 @@
     <tr>
         
         <th>id</th>
-        <th>epasts</th>
-        <th>dzest</th>
+        <th>email</th>
+        <th>date</th>
+        <th>delete</th>
     </tr>
     <?php
             
@@ -56,7 +63,8 @@
         <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['email']; ?></td>
         <td><?php echo $row['datums']; ?></td>
-        <td><button>x</button></td>
+        <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+        <td><button type="submit" id="poga" name="del"  >x</button></td>
     </tr> 
         <?php   
             }

@@ -18,6 +18,13 @@ class Model
       mysqli_query($con,"INSERT INTO email (email,datums) values ('$email','$datums')");
       header('Location: index.php');
     }
+    public function delete($id)
+    {
+      
+      $result=mysqli_query($this->dbh,"DELETE FROM email WHERE id='$id'");
+      header('Location: table.php');
+      
+    }
 }
 
 ?>
