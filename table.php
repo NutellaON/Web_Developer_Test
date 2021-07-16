@@ -1,17 +1,27 @@
 <?php
     include 'db.php';
+    $connect = mysqli_connect("localhost", "root", "", "web");
+    $limit=10;
+    $page=isset($_GET['page']) ?$_GET['page']:1;
+    $start=($page-1)*$limit;
+    $results=$connect->query("SELECT count(id) as id FROM email ");
+    $row=$results->fetch_all(MYSQLI_ASSOC);
+    $total=$row[0]['id'];
+    $pages=ceil($total/$limit);
+    $previous=$page-1;
+    $next=$page+1;
     if(isset($_POST['ASC']))
     {
-    $asc_query = "SELECT * FROM email ORDER BY email ASC";
+    $asc_query = "SELECT * FROM email ORDER BY email ASC LIMIT $start, $limit";
     $result = executeQuery($asc_query);
     }
     elseif (isset ($_POST['date'])) 
     {
-          $desc_query = "SELECT * FROM email ORDER BY datums asc";
+          $desc_query = "SELECT * FROM email ORDER BY datums asc LIMIT $start, $limit";
           $result = executeQuery($desc_query);
     }
     else {
-        $default_query = "SELECT * FROM email ORDER BY datums ASC";
+        $default_query = "SELECT * FROM email ORDER BY datums ASC LIMIT $start, $limit";
         $result =executeQuery($default_query);
         
         
@@ -32,6 +42,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+</style>
 </head>
 <body>
 
@@ -72,6 +94,29 @@
         ?> 
     </tr>
 </table>
+<div class="pagination">
+  <?php 
+    if ($page>1) 
+    {
+    ?>
+    <a href="table.php?page=<?=$previous; ?>">previous</a>
+    <?php
+    }
+    ?>
+    <?php
+    for($i=1; $i<=$pages;$i++): ?>
+    <a href="table.php?page=<?= $i; ?>"><?=$i; ?></a>
+    <?php endfor; ?>
+    <?php 
+    $pages;
+    if ($page!=$pages) 
+    {
+    ?>
+    <a href="table.php?page=<?=$next; ?>">next</a>
+    <?php
+    }
+    ?>   
+</div>
 </form>
 </body>
 </html>
